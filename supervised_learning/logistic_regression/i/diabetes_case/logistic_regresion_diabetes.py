@@ -5,7 +5,7 @@ import pandas as pd
 import seaborn as sns
 
 # Importing the dataset
-dataset = pd.read_csv("/home/isfanazhabil/Project/Python/Learn Machine Learning/Logistic Regression/Diabetes/diabetes.csv")
+dataset = pd.read_csv("../../../../datasource/diabetes.csv")
 # Features
 X = dataset.iloc[:, :-1].values
 # Target variable
@@ -18,6 +18,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random
 # Fitting classifier to the Training set
 from sklearn.linear_model import LogisticRegression
 classifier = LogisticRegression()
+classifier.predict()
 classifier.fit(X_train, y_train)
 
 # Predict the test set results
